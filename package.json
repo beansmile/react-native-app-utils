@@ -1,0 +1,75 @@
+{
+  "name": "react-native-app-utils",
+  "version": "0.1.0",
+  "description": "Some APP-related tools, such as exit the APP, restart the APP.",
+  "main": "./src/index.ts",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "react-native.config.js",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beansmile/react-native-app-utils.git"
+  },
+  "author": "beansmile <seven@beansmile.com> (https://github.com/beansmile)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beansmile/react-native-app-utils/issues"
+  },
+  "homepage": "https://github.com/beansmile/react-native-app-utils#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "codegenConfig": {
+     "name": "NativeAppUtilsSpec",
+     "type": "modules",
+     "jsSrcsDir": "src",
+     "outputDir": {
+      "ios": "ios/generated",
+      "android": "android/generated"
+    },
+     "android": {
+       "javaPackageName": "com.beansmile.apputils"
+     },
+     "ios": {
+        "modulesProvider": {
+          "NativeAppUtils": "RCTAppUtils"
+        }
+     }
+   }, 
+  "create-react-native-library": {
+    "languages": "kotlin-objc",
+    "type": "turbo-module",
+    "tools": [
+      "eslint",
+      "lefthook",
+      "release-it",
+      "jest"
+    ],
+    "version": "0.55.1"
+  }
+}
